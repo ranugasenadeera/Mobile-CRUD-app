@@ -5,4 +5,5 @@
     <string name="description">Description</string>
     <string name="location">Location</string>
     <string name="date">Date of Event</string>
+    <string name="events">Events</string>
 </resources>
