@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">MADExam4</string>
-    <string name="addNote">Add Event</string>
+    <string name="addEvent">Add Event</string>
     <string name="heading">Event Title</string>
     <string name="description">Description</string>
     <string name="location">Location</string>
     <string name="date">Date of Event</string>
     <string name="events">Events</string>
+    <string name="editEvent">Edit Event</string>
 </resources>

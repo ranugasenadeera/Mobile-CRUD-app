@@ -61,4 +61,43 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, Database_Name,
         db.close()
         return eventsList
     }
+
+    fun updateEvent(event: Events){
+        val db = writableDatabase
+        val values = ContentValues().apply {
+            put(Column_title, event.title)
+            put(Column_desc, event.description)
+            put(Column_date, event.date)
+            put(Column_location, event.location)
+        }
+        val whereClause = "$Column_id = ?"
+        val whereArgs = arrayOf(event.id.toString())
+        db.update(Table_name, values, whereClause, whereArgs)
+        db.close()
+    }
+
+    fun getEventByID(eventId: Int): Events{
+        val db = readableDatabase
+        val query = "SELECT * FROM $Table_name WHERE $Column_id = $eventId"
+        val cursor = db.rawQuery(query, null)
+        cursor.moveToFirst()
+
+        val id = cursor.getInt(cursor.getColumnIndexOrThrow(Column_id))
+        val title = cursor.getString(cursor.getColumnIndexOrThrow(Column_title))
+        val description = cursor.getString(cursor.getColumnIndexOrThrow(Column_desc))
+        val date = cursor.getString(cursor.getColumnIndexOrThrow(Column_date))
+        val location = cursor.getString(cursor.getColumnIndexOrThrow(Column_location))
+
+        cursor.close()
+        db.close()
+        return Events(id, title, description, date, location)
+    }
+
+    fun deleteEvent(eventId: Int){
+        val db = writableDatabase
+        val whereClause = "$Column_id = ?"
+        val whereArgs = arrayOf(eventId.toString())
+        db.delete(Table_name, whereClause, whereArgs)
+        db.close()
+    }
 }

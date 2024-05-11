@@ -38,6 +38,7 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/events"
+        android:textColor="#075ef8"
         android:textSize="24sp" />
 
 

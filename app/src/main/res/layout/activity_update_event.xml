@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddEvent">
+    tools:context=".UpdateEvent">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="52dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/addEvent"
+        android:text="@string/editEvent"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/title"
+            android:id="@+id/updateTitle"
             android:layout_width="353dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/description"
+            android:id="@+id/updateDescription"
             android:layout_width="353dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/date"
+            android:id="@+id/updateDate"
             android:layout_width="353dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/location"
+            android:id="@+id/updateLocation"
             android:layout_width="353dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
@@ -103,13 +103,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/updateSaveButton"
         android:layout_width="159dp"
         android:layout_height="69dp"
         android:layout_marginStart="124dp"
         android:layout_marginTop="604dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/addEvent"
+        android:text="@string/editEvent"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
