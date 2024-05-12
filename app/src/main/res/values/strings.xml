@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MADExam4</string>
+    <string name="app_name">Task Tracker</string>
     <string name="addEvent">Add Event</string>
     <string name="heading">Event Title</string>
     <string name="description">Description</string>
@@ -7,4 +7,6 @@
     <string name="date">Date of Event</string>
     <string name="events">Events</string>
     <string name="editEvent">Edit Event</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
