@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.madexam4.model.Task
 
-@Database(entities = [Task::class], version = 1)
+@Database(entities = [Task::class], version = 2)
 abstract class TaskDatabase: RoomDatabase() {
 
     abstract fun getTaskDao(): TaskDao
@@ -29,6 +29,8 @@ abstract class TaskDatabase: RoomDatabase() {
                 context.applicationContext,
                 TaskDatabase::class.java,
                 "task_db"
-            ).build()
+            )
+                .addMigrations(MIGRATION_1_2)
+                .build()
     }
 }

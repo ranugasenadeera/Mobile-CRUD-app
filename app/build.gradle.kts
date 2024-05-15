@@ -70,4 +70,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
     // Annotation processor
     ksp("androidx.lifecycle:lifecycle-compiler:$lifecycleVersion")
+
+    implementation ("androidx.work:work-runtime-ktx:2.7.1")
 }

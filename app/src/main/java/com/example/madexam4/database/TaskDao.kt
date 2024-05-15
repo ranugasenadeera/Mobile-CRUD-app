@@ -26,4 +26,8 @@ interface TaskDao {
     @Query("SELECT * FROM tasks WHERE taskTitle LIKE :query")
     fun searchTask(query: String?): LiveData<List<Task>>
 
+    @Query("SELECT * FROM tasks WHERE taskDate LIKE :date")
+    fun getTasksByDate(date: String?): LiveData<List<Task>>
+
+
 }

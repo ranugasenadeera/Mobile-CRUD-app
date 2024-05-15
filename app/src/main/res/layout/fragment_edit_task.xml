@@ -32,9 +32,28 @@
             android:textSize="20sp"
             android:layout_below="@id/editTaskHeading"
             android:background="@drawable/blue_border"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/darkBlue"
             android:layout_marginTop="16dp"
             android:maxLines="1"
             android:fontFamily="@font/poppins"/>
+
+        <EditText
+            android:id="@+id/editTaskDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select the Deadline"
+            android:layout_marginTop="18dp"
+            android:gravity="top"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins"
+            android:background="@drawable/blue_border"
+            android:layout_below="@id/editTaskTitle"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/darkBlue"
+            android:focusable="false"
+            android:inputType="none" />
 
         <EditText
             android:id="@+id/editTaskDesc"
@@ -46,7 +65,9 @@
             android:textSize="18sp"
             android:fontFamily="@font/poppins"
             android:background="@drawable/blue_border"
-            android:layout_below="@id/editTaskTitle"
+            android:layout_below="@id/editTaskDate"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/darkBlue"
             android:layout_marginTop="18dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

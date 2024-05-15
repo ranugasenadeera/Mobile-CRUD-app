@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.madexam4.databinding.TaskLayoutBinding
-import com.example.madexam4.fragment.HomeFragment
 import com.example.madexam4.fragment.HomeFragmentDirections
 import com.example.madexam4.model.Task
 
@@ -18,6 +17,7 @@ class TaskAdapter: RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
     private val diffCallback = object : DiffUtil.ItemCallback<Task>(){
         override fun areItemsTheSame(oldItem: Task, newItem: Task): Boolean {
             return oldItem.id == newItem.id &&
+                    oldItem.taskDate == newItem.taskDate &&
                     oldItem.taskDesc == newItem.taskDesc &&
                     oldItem.taskTitle == newItem.taskTitle
         }
@@ -43,6 +43,7 @@ class TaskAdapter: RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
         holder.itemBinding.taskTitle.text = currentTask.taskTitle
         holder.itemBinding.taskDesc.text = currentTask.taskDesc
+        holder.itemBinding.taskDate.text = currentTask.taskDate
 
         holder.itemView.setOnClickListener{
             val direction = HomeFragmentDirections.actionHomeFragmentToEditTaskFragment(currentTask)

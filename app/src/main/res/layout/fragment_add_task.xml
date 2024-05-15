@@ -27,27 +27,49 @@
             android:id="@+id/addTaskTitle"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter the title"
-            android:padding="12dp"
-            android:textSize="20sp"
             android:layout_below="@id/addTaskHeading"
-            android:background="@drawable/blue_border"
             android:layout_marginTop="16dp"
+            android:background="@drawable/blue_border"
+            android:fontFamily="@font/poppins"
+            android:hint="Enter the title"
             android:maxLines="1"
-            android:fontFamily="@font/poppins"/>
+            android:padding="12dp"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/darkBlue"
+            android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/addTaskDesc"
+            android:id="@+id/addTaskDate"
             android:layout_width="match_parent"
-            android:layout_height="360dp"
-            android:hint="Enter the description"
+            android:layout_height="wrap_content"
+            android:hint="Select the Deadline"
+            android:layout_marginTop="18dp"
             android:gravity="top"
             android:padding="12dp"
             android:textSize="18sp"
             android:fontFamily="@font/poppins"
             android:background="@drawable/blue_border"
             android:layout_below="@id/addTaskTitle"
-            android:layout_marginTop="18dp" />
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/darkBlue"
+            android:focusable="false"
+            android:inputType="none" />
+
+
+        <EditText
+            android:id="@+id/addTaskDesc"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_below="@id/addTaskDate"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/blue_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="Enter the description"
+            android:padding="12dp"
+            android:textColor="@color/darkBlue"
+            android:textColorHint="@color/darkBlue"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 </layout>

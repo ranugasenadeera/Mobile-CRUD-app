@@ -3,10 +3,12 @@ package com.example.madexam4.viewmodel
 import android.app.Application
 import android.app.DownloadManager.Query
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.madexam4.model.Task
 import com.example.madexam4.repository.TaskRepository
 import kotlinx.coroutines.launch
+import java.util.Date
 
 class TaskViewModel(app: Application, private val taskRepository:TaskRepository): AndroidViewModel(app) {
 
@@ -29,4 +31,7 @@ class TaskViewModel(app: Application, private val taskRepository:TaskRepository)
 
     fun searchTask(query: String?) =
         taskRepository.searchTask(query)
+
+    fun getTasksByDate(date: String?) =
+        taskRepository.getTasksByDate(date)
 }

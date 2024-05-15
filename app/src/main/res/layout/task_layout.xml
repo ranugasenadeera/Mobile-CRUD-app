@@ -32,6 +32,17 @@
                 android:textSize="18sp"/>
 
             <TextView
+                android:id="@+id/taskDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxHeight="170dp"
+                android:text="Date"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/blue"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/taskDesc"
